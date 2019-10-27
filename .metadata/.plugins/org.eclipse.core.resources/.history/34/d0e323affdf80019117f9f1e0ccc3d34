@@ -1,0 +1,20 @@
+server:
+  port: 9070
+
+spring:
+  application:
+    name: api-gateway-service
+
+zuul:
+  routes:
+    multimedia:
+      path: /services/multimedia/**
+      serviceId: my-example-service
+      
+    posts:
+      path: /services/posts/**
+      serviceId: my-example-service
+      
+    users:
+      path: /services/users/**
+      serviceId: my-example-service
